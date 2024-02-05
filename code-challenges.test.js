@@ -43,6 +43,21 @@ function generateFibonacci(length) {
 
 // b) Create the function that makes the test pass.
 
+const generateFibonacci = require('./path-to-your-file'); // Adjust the path accordingly
+
+test('generateFibonacci - Test Case 1', () => {
+  const fibonacciLength = 6;
+  const result = generateFibonacci(fibonacciLength);
+  expect(result).toEqual([1, 1, 2, 3, 5, 8]);
+});
+
+test('generateFibonacci - Test Case 2', () => {
+  const fibonacciLength = 10;
+  const result = generateFibonacci(fibonacciLength);
+  expect(result).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+});
+
+
 // Pseudo code: I had to use chatgpt to get the answer.  I tried using it to also breakdown and explain how it got to that answer but I just had a hard time understanding a lot of what it was saying.
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
@@ -69,5 +84,20 @@ function calculateTally(votes) {
   console.log("Test Case 2:", result2);
   
 // b) Create the function that makes the test pass.
+
+const calculateTally = require('./path-to-your-file'); // Adjust the path accordingly
+
+test('calculateTally - Test Case 1', () => {
+  const votes = { upVotes: 13, downVotes: 2 };
+  const result = calculateTally(votes);
+  expect(result).toBe(11);
+});
+
+test('calculateTally - Test Case 2', () => {
+  const votes = { upVotes: 2, downVotes: 33 };
+  const result = calculateTally(votes);
+  expect(result).toBe(-31);
+});
+
 
 // Pseudo code: Again, I had to use chatgpt to get the answer.  It started to make a bit more sense towards the end after chatgpt broke it down, but I would like more work and time to understand this better.
